@@ -8,7 +8,7 @@ The overall workflow is as follows. Steps 1-3 are for setting up inputs to the p
     - These three files need to be paired in the same folder, with a separate folder per cell.
     - For correlation with adhesion images, the file will contain the variables `corrDataStruct` and `focalAdhesionAll`, which additionally have information on tracks in relation to adhesions, and on the adhesions themselves.
 
-2. The diffusional dynamics of these tracks is analyzed using the code in `diffusional_dynamics`, which relies on [variational Bayes single particle tracking](http://vbspt.sourceforge.net) (vbSPT).
+2. The diffusional dynamics of these tracks is analyzed using the code in __`diffusional_dynamics`__ (up one level), which relies on [variational Bayes single particle tracking](http://vbspt.sourceforge.net) (vbSPT).
     - In principle, any method to annotate tracks frame-by-frame with slow/fast diffusional states would work.
 
 3. The folders containing the two `.mat` files and `roi.roi` files per each cell are uploaded to Longleaf, as is a folder containing `.mat` files containing the vbSPT-annotated diffusional states. As an example, the file structure might look like, for 3 cells,

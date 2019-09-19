@@ -61,5 +61,5 @@ We found that a 2-state model was sufficient to describe our data based on the p
 <center>
 <img src='HMM_score_vs_states.png'>
 
-<b> Model scores for tagSrc (blue) and Binder (red) as a function of number of diffusive states. Each line represents an individual cell. </b> The normalized model score, $F/F_{max}$, represents a model's score divided by the maximal score for that cell across models containing 1, 2, 3, 4, or 5 diffusive states. F is a bound on $\text{ln}(p(x|N))$, the probability of the data $x$ given the number of diffusive states $N$. See Eq. S7 in the vbSPT userguide (downloadable as part of the software [here](https://media.nature.com/original/nature-assets/nmeth/journal/v10/n3/extref/nmeth.2367-S2.zip)) for details.
+<b> Model scores for tagSrc (blue) and Binder (red) as a function of number of diffusive states. Each line represents an individual cell. </b> The normalized model score, $F/F_{max}$, represents a model's score divided by the maximal score for that cell across models containing 1, 2, 3, 4, or 5 diffusive states. $F$ is a bound on $\text{ln}(p(x|N))$, the probability of the data $x$ given the number of diffusive states $N$. See Eq. S7 in the vbSPT userguide (downloadable as part of the software [here](https://media.nature.com/original/nature-assets/nmeth/journal/v10/n3/extref/nmeth.2367-S2.zip)) for details.
 </center>
