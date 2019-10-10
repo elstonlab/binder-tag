@@ -5,7 +5,7 @@ function error_final = markov_score_final(k1,k2,k3,k4,k5,k6,k7,k8,f1,dt)
 %
 %   markov_score_full is a score function determining the error between
 %   experimental measurements and a Markov chain model for Binder - TagSrc.
-% 
+%
 % Example:
 %    markov_score_final(6.48905965,  6.63210682,  1.78802208,  2.38706198,0.0,  1.29793274,12.54244379,  0.16762255,  0.13129243, 0.001)
 %
@@ -13,7 +13,7 @@ function error_final = markov_score_final(k1,k2,k3,k4,k5,k6,k7,k8,f1,dt)
 %    The following variables are used for the Markov chain Binder -TagSrc
 %    model. Best fit values (determined by an evolutionary algorithm) are
 %    given.
-% 
+%
 %    VAR.     DESCRIPTION                            VALUE
 %    ----------------------------------------------------------------------
 %    k1       Src opening                            6.49 s^-1
@@ -24,7 +24,7 @@ function error_final = markov_score_final(k1,k2,k3,k4,k5,k6,k7,k8,f1,dt)
 %    k6       One-step Src inact. + tS:B dissoc.     1.30 s^-1
 %    k7       Inactive Src PM dissociation           12.5 s^-1
 %    k8       Active Src PM dissociation             0.17 s^-1
-%    f1       %recruited to PM, inactive             0.13 (17% of the pop.) 
+%    f1       %recruited to PM, inactive             0.13 (17% of the pop.)
 %
 %    dt       Time step (recommended)                0.001 s
 %
@@ -34,46 +34,46 @@ function error_final = markov_score_final(k1,k2,k3,k4,k5,k6,k7,k8,f1,dt)
 %
 %   tagsrc_lifetimes.csv         Experimental tagSrc lifetimes for
 %                                codiffusion scenarios (w/ Binder)
-% 
+%
 %   binder_lifetimes.csv         Experimental Binder lifetimes for
 %                                codiffusion scenarios (w/ tagSrc)
-% 
-%   All events histogram.csv     Experimental tagSrc lifetimes for all 
-%                                scenarios 
-% 
+%
+%   All events histogram.csv     Experimental tagSrc lifetimes for all
+%                                scenarios
+%
 %   event_times.mat              Measured processes of activation,
-%                                inactivation, Src PM dissociation, and 
+%                                inactivation, Src PM dissociation, and
 %                                active Src PM dissociation
-% 
+%
 %   f3                           The experimentally measured proportion of
-%                                PM recruitment for active tagSrc with 
-%                                Binder. Note that f1 and f2 must sum to 
-%                                1 - f3, but neither  of these could be 
-%                                experimentally measured. 
-% 
-% Additional scripts used 
+%                                PM recruitment for active tagSrc with
+%                                Binder. Note that f1 and f2 must sum to
+%                                1 - f3, but neither  of these could be
+%                                experimentally measured.
+%
+% Additional scripts used
 %
 %   NAME	                 DESCRIPTION
 %
 %   RunLength.c/RunLength.m	 Author: Jan Simon, Heidelberg
-% 
+%
 %   custom_simulate.m        Custom dtmc code for this model
-% 
+%
 % Output Argument:
-% 
+%
 %   error_final - Returns a sum of the MSE between the measured and simulated
 %       distributions of: codiffusion categories, all scenarios tagSrc
 %       lifetimes, codiffusion scenarios binder lifetimes, codiffusion
 %       scenarios tagSrc lifetimes, Src activation lifetimes, Src inactivation
 %       lifetimes, inactive Src PM dissociation lifetimes, and active Src PM
-%       dissociation lifetimes. 
+%       dissociation lifetimes.
 
 f3 = 0.24; %observed proportion active w/ Binder recruited to PM
 f2 = 1-f3-f1; % proportion starting in each state must sum to 1
 
 
 
-% Discrete-Time Markov Chain transition probabilities 
+% Discrete-Time Markov Chain transition probabilities
 pab = 1-exp(-k1*dt);
 pac = 1-exp(-k5*dt);
 pad = 1-exp(-k7*dt);
@@ -94,7 +94,7 @@ pdb = 0;
 pdc = 0;
 pdd = 1;
 
-% Probability matrix 
+% Probability matrix
 P = [paa pab pac pad; ...
      pba pbb pbc pbd; ...
      pca pcb pcc pcd; ...
@@ -103,13 +103,13 @@ P = [paa pab pac pad; ...
 % Require all non-diagonal rates to follow Poisson assumption.
 poisson_assertion = all(P(~eye(size(P)))<0.1);
 
-% If Poission assumption not met, return large score 
+% If Poission assumption not met, return large score
 if poisson_assertion ~= 1
     error_final = 100;
     return;
 end
 
-mc = dtmc(P);
+
 
 % start nrealiz simulations, each from each state.
 rng(1)
@@ -121,7 +121,7 @@ codifCategory = zeros(3,nrealiz);
 stateVec = cell(3,nrealiz);
 binder_LT = zeros(3,nrealiz);
 
-%lifetimes for the four events/processes 
+%lifetimes for the four events/processes
 sim_process_1 = zeros(3,nrealiz);
 sim_process_2 = zeros(3,nrealiz);
 sim_process_3 = zeros(3,nrealiz);
@@ -132,33 +132,31 @@ addpath('RunLength_2017_04_08/');
 
 for i=1:3
     for j=1:nrealiz
-        
+
         %start in state i
         currx0 = [0 0 0 0];
         currx0(i) = 1;
-        
-        [curr_fpt,curr_wasCodif,curr_codifCat,currstateVec] = custom_simulate(mc,4.5/dt,'x0',currx0,'dt',dt);
 
-       
+        [curr_fpt,curr_wasCodif,curr_codifCat,currstateVec] = markov_sim(P,4.5/dt,currx0,dt);
+
         % Simplifies the currstate Vector into state order and lifetime
         [rl_b,rl_n]=RunLength(currstateVec);
-        
-        
+
         % If Binder is re-entrant or never entered, we need to throw the trajectory.
-        if sum((rl_b==3))>=2 
+        if sum((rl_b==3))>=2
             fpt(i,j) = nan;
             wasCodiffusion(i,j) = false;
             codifCategory(i,j) = nan;
             stateVec{i,j} = nan;
             binder_LT(i,j) = nan;
-            
+
         elseif sum((rl_b==3)) == 0
             fpt(i,j) = curr_fpt*dt*1000;
             wasCodiffusion(i,j) = false;
             codifCategory(i,j) = nan;
             stateVec{i,j} = currstateVec;
             binder_LT(i,j) = nan;
-            
+
         else
             % time spent in state 3 is the binder lifetime
             binder_LT(i,j) = rl_n(rl_b==3)*dt*1000;
@@ -265,7 +263,7 @@ codif_fpt_s1(isnan(codif_fpt_s1)) = [];
 codif_fpt_s2(isnan(codif_fpt_s2)) = [];
 codif_fpt_s3(isnan(codif_fpt_s3)) = [];
 
-if isempty(codif_fpt_s1) || isempty(codif_fpt_s2)  || isempty(codif_fpt_s3) 
+if isempty(codif_fpt_s1) || isempty(codif_fpt_s2)  || isempty(codif_fpt_s3)
     error_final = 100;
     return;
 end
@@ -296,7 +294,7 @@ sim_process_3(sim_process_3==0) = nan;
 sim_process_2(sim_process_2<240) = nan;
 sim_process_4(sim_process_4<240) = nan;
 
-% Also drop out processes longer than 1500s 
+% Also drop out processes longer than 1500s
 sim_process_1_state_1(sim_process_1_state_1 > 1500) = nan;
 sim_process_1_state_2(sim_process_1_state_2 > 1500) = nan;
 
@@ -329,11 +327,11 @@ binder_codiff_data_h = binder_codiff_data(2:end,5)/sum(binder_codiff_data(2:end,
                        'binedges',230:60:1430);
 [dist3,~] = histcounts(codif_fpt_s3,'normalization','probability',...
                        'binedges',230:60:1430);
-                   
+
 [binder_codiff_dist, ~] = histcounts(codif_binder,'normalization','probability',...
                        'binedges',230:60:1430);
-                   
-% True distribution adjusted for proportion starting in each state 
+
+% True distribution adjusted for proportion starting in each state
 tag_codiff_dist = dist1*f1 + dist2*f2 + dist3*f3;
 
 % Get individual tag and binder lifetimes
@@ -361,7 +359,7 @@ tag_lft3(isnan(tag_lft3)) = [];
                        'binedges',230:60:1430);
 [dist_tag3,~] = histcounts(tag_lft3,'normalization','probability',...
                        'binedges',230:60:1430);
-                   
+
 dist_all_tag = dist_tag1*f1 + dist_tag2*f2 + dist_tag3*f3;
 
 
@@ -379,7 +377,7 @@ cat4 = sum(codiff_cat == 4)/length(codiff_cat);
 cat1_adj = cat1*(f1+f2)/(cat1+cat2);
 cat2_adj = cat2*(f1+f2)/(cat1+cat2);
 cat3_adj = cat3*f3/(cat3+cat4);
-cat4_adj = cat4*f3/(cat3+cat4); 
+cat4_adj = cat4*f3/(cat3+cat4);
 
 
 
@@ -423,16 +421,16 @@ sim_process_1_dist = f1/(f1+f2)*sim_process_1_state_1_dist +f2/(f1+f2)*sim_proce
 [sim_process_4_dist,~]=histcounts(sim_process_4,'normalization','probability','binedges',0:20:1500);
 
 
-% Get MSEs 
+% Get MSEs
 
-% Codiffusion category simulation and experimental measures 
+% Codiffusion category simulation and experimental measures
 sim_cat = [cat1_adj,cat2_adj,cat3_adj,cat4_adj];
-exp_cat = [0.72,.04,.22,.02]; % Experimental ratios 
+exp_cat = [0.72,.04,.22,.02]; % Experimental ratios
 
-mse_codiff_cat = immse(exp_cat, sim_cat); 
+mse_codiff_cat = immse(exp_cat, sim_cat);
 
 
-% Truing a run using immse - accidentally did sse here 
+% Truing a run using immse - accidentally did sse here
 % mse_codiff_tag=sum((tagsrc_codiff_data_h-transpose(tag_codiff_dist)).^2);
 % mse_codiff_binder=sum((binder_codiff_data_h-transpose(binder_codiff_dist)).^2);
 % mse_all_tag = sum((tagsrc_all_data_h-transpose(dist_all_tag)).^2);
@@ -452,6 +450,6 @@ error_final = double(mse_codiff_cat + mse_all_tag + mse_codiff_binder + ...
 
 if isnan(error_final)
     error_final = 100.;
-end 
+end
 
 end

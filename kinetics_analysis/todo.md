@@ -1,0 +1,4 @@
+- [ ] Link the RunLength Github as a dependency
+- [ ] Finish updating all functions
+- [ ] Re-test updated functions on Longleaf
+- [ ] Upload paper-style figure generating functions
