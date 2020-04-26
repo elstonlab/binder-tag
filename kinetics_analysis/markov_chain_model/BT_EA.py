@@ -88,7 +88,7 @@ def ScoreFxn(learned_params):
     k1, k2, k3, k4, k6, k7, k8, f1 = [float(x) for x in arr_params]
     k5 = 0.0
     
-    error = eng.markov_score_full(k1, k2, k3, k4, 0.0, k6, k7, k8, f1, 0.001)
+    error = eng.markov_score_final(k1, k2, k3, k4, 0.0, k6, k7, k8, f1, 0.001)
     return error
 
 #helper 
