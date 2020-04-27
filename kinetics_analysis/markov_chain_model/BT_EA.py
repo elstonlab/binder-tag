@@ -9,6 +9,7 @@ from deap import base, creator, tools, algorithms
 import pickle
 import time as timeski
 import os
+import numpy as np
 
 import matlab.engine 
 eng = matlab.engine.start_matlab() #start matlab engine
