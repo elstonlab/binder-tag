@@ -54,11 +54,11 @@ The overall workflow is as follows. Steps 1-3 are for setting up inputs to the p
         % Note -- we keep the dateprefix from the old run (and we might as well keep
         % the parentFigDir) since we need to use the previous refinementII files
 
-        dataloc = 'inputdata/';
-        vbSPTDirLoc = 'inputdata/vbspt/results/';
-        vbSPTMetaDirLoc = 'inputdata/vbspt/vbspt_source/';
-        dateprefix = '20180813_PXN_100pg';
-        parentFigDir = 'figures_20180813_PXN_100pg/';
+        dataloc = 'sourcedata/';
+        vbSPTDirLoc = 'sourcedata/vbspt/results/';
+        vbSPTMetaDirLoc = 'sourcedata/vbspt/vbspt_source/';
+        dateprefix = '20180813';
+        parentFigDir = 'figures_20180813/';
         nMinTracks = 10;
         maxRIcutoff = 4;
         numCPUs = 16;
@@ -73,6 +73,7 @@ The overall workflow is as follows. Steps 1-3 are for setting up inputs to the p
 
         #!/bin/bash
 
-        sbatch -p general -N 1 -n 16 -t 60:00:00 --wrap="matlab -nodisplay -nosplash -singleCompThread -r r_analyze_01\(\) -logfile r01.log"
+        sbatch -p general -N 1 -n 16 -t 60:00:00 --wrap="matlab -nodisplay -nosplash -singleCompThread -r run_analysis\(\) -logfile r01.log"
 
 6. Executing the Bash file should now run the entire pipeline.
+7. After this initial analysis, later investigations let us to test several other measurements and apply additional filters. Details on this are provided in the `follow_up_analyses` folder.
