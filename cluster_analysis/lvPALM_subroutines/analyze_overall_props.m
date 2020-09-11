@@ -19,13 +19,11 @@
 % Saves a .mat file to the working directory:
 %   [dateprefix filesuffix '.mat']
 %
-% Also produces figures for each type of analysis carried out.
-%
 % Part of the cluster_segmentation.m pipeline.
 % 2018 May 9 / Mike Pablo
 
 function analyze_overall_props(dataloc,vbSPTloc,vbSPTmetaloc,dateprefix,measpropsuffix,analpropsuffix,...
-                               nMinTracks,filesuffix,parentFigDir)
+                               nMinTracks,filesuffix)
 [all_path,all_file] = get_file_structures(dataloc);
 ncells = numel(all_path.tag);
 
@@ -36,12 +34,6 @@ analprop = load([dateprefix analpropsuffix]); % analyzed properties, needed for 
 
 overall_prop_tag = cell(ncells,1);
 overall_prop_bin = cell(ncells,1);
-
-figSubDir = 'overall_analysis/';
-parentFigDir = [parentFigDir figSubDir];
-warning('off');
-mkdir(parentFigDir);
-warning('on');
 
 parfor i=1:ncells
     curr_expdatafile_tag = [all_path.tag{i} '/' all_file.tag{i}];

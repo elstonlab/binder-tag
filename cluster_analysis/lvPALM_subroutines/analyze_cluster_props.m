@@ -18,12 +18,10 @@
 % Saves a .mat file to the working directory:
 %   [dateprefix filesuffix '.mat']
 %
-% Also produces figures for each type of analysis carried out.
-%
 % Part of the cluster_segmentation.m pipeline.
 % 2018 May 9 / Mike Pablo
 
-function analyze_cluster_props(dateprefix,propsuffix,filesuffix,nMinTracks,RIcutoff,parentFigDir)
+function analyze_cluster_props(dateprefix,propsuffix,filesuffix,nMinTracks,RIcutoff)
 clusprop = load([dateprefix propsuffix]);
 ncells = numel(clusprop.tag_prop);
 % propPointEst: point estimates of the property distribution
@@ -33,12 +31,6 @@ propPointEst_tag = cell(ncells,1);
 propPointEst_bin = cell(ncells,1);
 propdists_tag = cell(ncells,1);
 propdists_bin = cell(ncells,1);
-
-figSubDir = 'clus_analysis/';
-parentFigDir = [parentFigDir figSubDir];
-warning('off');
-mkdir(parentFigDir);
-warning('on');
 
 parfor i=1:ncells
     [propPointEst_tag{i},propdists_tag{i}] = analyze_props(clusprop.tag_prop{i},nMinTracks);
