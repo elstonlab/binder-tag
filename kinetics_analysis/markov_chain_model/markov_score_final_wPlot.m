@@ -7,7 +7,7 @@ function error_final = markov_score_final_wPlot(k1,k2,k3,k4,k5,k6,k7,k8,f1,dt,pl
 %   experimental measurements and a Markov chain model for Binder - TagSrc.
 %
 % Example:
-%    markov_score_final(6.48905965,  6.63210682,  1.78802208,  2.38706198,0.0,  1.29793274,12.54244379,  0.16762255,  0.13129243, 0.001)
+%    markov_score_final_wPlot(6.48905965,  6.63210682,  1.78802208,  2.38706198,0.0,  1.29793274,12.54244379,  0.16762255,  0.13129243, 0.001,1)
 %
 % Input Arguments:
 %    The following variables are used for the Markov chain Binder -TagSrc
@@ -110,7 +110,7 @@ if poisson_assertion ~= 1
 end
 
 % start nrealiz simulations, each from each state.
-rng(1)
+%rng(1)
 nrealiz = 5000;
 
 fpt = zeros(3,nrealiz); % first passage time simulation time (from start to PM recruitment)
@@ -365,7 +365,11 @@ dist_all_tag = dist_tag1*f1 + dist_tag2*f2 + dist_tag3*f3;
 
 % Get the codiffusion category percentages
 codiff_cat = codifCategory(:);
+
+% Clean and exclude observations with binder lifetime < 240 ms
+codiff_cat = codiff_cat(binder_LT(:) >=240);
 codiff_cat = codiff_cat(~isnan(codiff_cat));
+
 
 cat1 = sum(codiff_cat == 1)/length(codiff_cat);
 cat2 = sum(codiff_cat == 2)/length(codiff_cat);

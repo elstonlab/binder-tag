@@ -112,7 +112,7 @@ end
 
 
 % start nrealiz simulations, each from each state.
-rng(1)
+% rng(1) % use rng(1) for testing on a single rng seed
 nrealiz = 5000;
 
 fpt = zeros(3,nrealiz); % first passage time simulation time (from start to PM recruitment)
@@ -365,7 +365,11 @@ dist_all_tag = dist_tag1*f1 + dist_tag2*f2 + dist_tag3*f3;
 
 % Get the codiffusion category percentages
 codiff_cat = codifCategory(:);
+
+% Clean and exclude observations with binder lifetime < 240 ms
+codiff_cat = codiff_cat(binder_LT(:) >=240);
 codiff_cat = codiff_cat(~isnan(codiff_cat));
+
 
 cat1 = sum(codiff_cat == 1)/length(codiff_cat);
 cat2 = sum(codiff_cat == 2)/length(codiff_cat);
