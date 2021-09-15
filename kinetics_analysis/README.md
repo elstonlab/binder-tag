@@ -28,7 +28,13 @@
 	The score function consisted of the mean-squared error (MSE) between the experimental and simulated lifetime distributions (3), process time distributions (4), and the  co-diffusion category breakdowns. These eight values were summed for a final error score.
 
 ##Evolutionary algorithm:
-	The model was parameterized using an evolutionary algorithm (EA) with 29 independent runs of 100 individuals over 40 generations. The mutation rate was set to 0.1 and the crossover rate was set to 0.5. The rate constants k1, k2, … k8 were given an allowable range between 10-4 and 20 s-1. The proportion beginning in the open tagSrc configuration with Binder was experimentally measured to be 24% (f3 = 0.24), thus the proportion of simulations beginning in the closed tagSrc configuration (f1) was given an allowable range between 10-4 and 0.76, and f2 (proportion beginning in the open tagSrc configuration) was set to 1 – f1 – f3. The EA aimed to minimize the total error as described above.
+	The model was initially parameterized using an evolutionary algorithm (EA) with 29 independent runs of 100 individuals over 100 generations. The mutation rate was set to 0.1 and the crossover rate was set to 0.5. The rate constants k1, k2, … k8 were given an allowable range between 10-4 and 20 s-1. The proportion beginning in the open tagSrc configuration with Binder was experimentally measured to be 24% (f3 = 0.24), thus the proportion of simulations beginning in the closed tagSrc configuration (f1) was given an allowable range between 10-4 and 0.76, and f2 (proportion beginning in the open tagSrc configuration) was set to 1 – f1 – f3. The EA aimed to minimize the total error as described above.
+
+##Validation:
+	Distributions were simulated from known, ground-truth parameters in an attempt to validate the model. An additional EA was run using this simulated data in place of the experimental data within the score function. 
+
+##MCMC:
+	For both the experimental and validation data sets, the single best parameter set was used to initialize a Delayed Rejection Adaptive Metropolis-Markov Chain Monte Carlo (DRAM-MCMC) optimization to explore the local parameter space and to give error bounds to parameters. For each parameter set, 3 DRAM-MCMCs were run. Input parameters were set to tune the acceptance ratio, and the first (roughly) half of each chain was thrown away as a burn-in, resulting in 5000-step chains. 
 
 ## Independence of results from tagSrc or Binder expression (`show_dox_indept`)
 Loads in the process time data for the 0pg, 10pg, 100pg, and 250pg doxycycline-treated co-diffusion events.
