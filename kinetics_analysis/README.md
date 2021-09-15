@@ -31,4 +31,4 @@
 	The model was parameterized using an evolutionary algorithm (EA) with 29 independent runs of 100 individuals over 40 generations. The mutation rate was set to 0.1 and the crossover rate was set to 0.5. The rate constants k1, k2, … k8 were given an allowable range between 10-4 and 20 s-1. The proportion beginning in the open tagSrc configuration with Binder was experimentally measured to be 24% (f3 = 0.24), thus the proportion of simulations beginning in the closed tagSrc configuration (f1) was given an allowable range between 10-4 and 0.76, and f2 (proportion beginning in the open tagSrc configuration) was set to 1 – f1 – f3. The EA aimed to minimize the total error as described above.
 
 ## Independence of results from tagSrc or Binder expression (`show_dox_indept`)
-Loads in the process time data for the 0pg, 10pg, 100pg, and 250pg doxycycline-treated co-diffusion events. 
+Loads in the process time data for the 0pg, 10pg, 100pg, and 250pg doxycycline-treated co-diffusion events.

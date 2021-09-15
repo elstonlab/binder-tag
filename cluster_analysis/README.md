@@ -3,7 +3,7 @@
 ## Overview
 The overall workflow is as follows. Steps 1-3 are for setting up inputs to the pipeline.
 1. Single particle tracking of tagSrc and Binder and subsequent analysis generates two files, `Exp20_EM350_1_MMStack_Pos0.ome_Left_lvPALM.mat` (Binder), and `Exp20_EM350_1_MMStack_Pos0.ome_RightCali_lvPALM.mat` (tagSrc).
-    - They contain the variable `smLinked`, which contains a $M\times 17$ matrix where the first two columns correspond to $x$ and $y$ coordinates in px ($1 \text{ px} = 0.1067\text{ } \mu m$).
+    - They contain the variable `smLinked`, which contains a Mx17 matrix where the first two columns correspond to x and y coordinates in px (1 px = 0.1067 microns).
     - The `roi.roi` file is generated from drawing an ROI around the cell in [FIJI](https://fiji.sc)
     - These three files need to be paired in the same folder, with a separate folder per cell.
     - For correlation with adhesion images, the file will contain the variables `corrDataStruct` and `focalAdhesionAll`, which additionally have information on tracks in relation to adhesions, and on the adhesions themselves.
@@ -76,4 +76,5 @@ The overall workflow is as follows. Steps 1-3 are for setting up inputs to the p
         sbatch -p general -N 1 -n 16 -t 60:00:00 --wrap="matlab -nodisplay -nosplash -singleCompThread -r run_analysis\(\) -logfile r01.log"
 
 6. Executing the Bash file should now run the entire pipeline.
-7. After this initial analysis, later investigations let us to test several other measurements and apply additional filters. Details on this are provided in the `follow_up_analyses` folder.
+7. A follow-up annotation of the pipeline results was done (see `follow_up_analyses`) which adds important criteria used for the final quantifications. This step also pools all the data together into a single file.
+8. For the analyses reported in the manuscript, we used functions in `cluster_postprocessing` to conservatively define clusters and apply specific statistical methods (e.g. bootstrapping for cluster sizes).
