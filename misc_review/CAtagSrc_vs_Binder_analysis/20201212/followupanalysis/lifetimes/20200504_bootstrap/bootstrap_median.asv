@@ -1,0 +1,2 @@
+load('I:\Elston Lab\MikePablo\20180504-bindertag\20190617_remeasuring_properties\lifetimes\track_lifetime_analysis.mat')
+lifetimes_tag_clus = cell2mat(tag_cluslifetimes)*.02;

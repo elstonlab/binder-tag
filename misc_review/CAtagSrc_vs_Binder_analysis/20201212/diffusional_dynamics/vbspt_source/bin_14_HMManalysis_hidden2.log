@@ -1,0 +1,94 @@
+
+vbSPT, VB3_HMManalysis, Copyright (C) 2012 Martin Lindén and Fredrik Persson 
+v 1.1.2, Martin Lindén 2014, v 1.1.3, Martin Lindén 2015.
+
+This program comes with ABSOLUTELY NO WARRANTY. 
+This is free software, and you are welcome to redistribute it 
+under certain conditions. See license.txt for details. 
+
+Additional permission under GNU GPL version 3 section 7 
+
+If you modify this Program, or any covered work, by linking or combining it 
+with Matlab or any Matlab toolbox, the licensors of this Program grant you 
+additional permission to convey the resulting work. 
+
+----------
+15-Dec-2020 21:35:42 : Starting greedy optimization to find best model.
+jobID        : Data from bin_14.mat :: vbspt_tracks :: 20201215
+runinput file: C:\Users\mike\Documents\GitHub\binder-tag\initial_review\CAtagSrc_vs_Binder_analysis\20201212\diffusional_dynamics\runinput_files\runinput_20201215_bin_14_hidden_2.m
+input  file  : ../vbspt_source/bin_14.mat
+trj field    : vbspt_tracks
+output file  : .\bin_14_HMManalysis_hidden2.mat
+log file     : .\bin_14_HMManalysis_hidden2.log
+----------
+Read options structure based on runinput file C:\Users\mike\Documents\GitHub\binder-tag\initial_review\CAtagSrc_vs_Binder_analysis\20201212\diffusional_dynamics\runinput_files\runinput_20201215_bin_14_hidden_2.m
+Iter 25. Adding 17596 extra transitions to final model helped : dF/|F| = 1.1202e-08, time : 0.083674 s.
+Iter 25. Finished greedy search in 1.4817 s, with 2 states.
+Iter 24. Adding 17596 extra transitions to final model helped : dF/|F| = 1.1423e-08, time : 0.080998 s.
+Iter 24. Finished greedy search in 1.1418 s, with 2 states.
+Iter 23. Adding 17579 extra transitions to final model helped : dF/|F| = 1.1049e-08, time : 0.074277 s.
+Iter 23. Finished greedy search in 1.0843 s, with 2 states.
+Iter 22. Adding 17595 extra transitions to final model helped : dF/|F| = 1.013e-08, time : 0.071779 s.
+Iter 22. Finished greedy search in 0.94944 s, with 2 states.
+Iter 21. Adding 17579 extra transitions to final model helped : dF/|F| = 1.1628e-08, time : 0.072572 s.
+Iter 21. Finished greedy search in 1.2543 s, with 2 states.
+Iter 20. Adding 17579 extra transitions to final model helped : dF/|F| = 1.0058e-08, time : 0.085508 s.
+Iter 20. Finished greedy search in 1.2789 s, with 2 states.
+Iter 19. Adding 17578 extra transitions to final model helped : dF/|F| = 1.2266e-08, time : 0.10152 s.
+Iter 19. Finished greedy search in 1.2953 s, with 2 states.
+Iter 18. Adding 17579 extra transitions to final model helped : dF/|F| = 1.171e-08, time : 0.074502 s.
+Iter 18. Finished greedy search in 1.1914 s, with 2 states.
+Iter 17. Adding 17595 extra transitions to final model helped : dF/|F| = 9.9098e-09, time : 0.071266 s.
+Iter 17. Finished greedy search in 1.3467 s, with 2 states.
+Iter 16. Adding 17596 extra transitions to final model helped : dF/|F| = 1.0641e-08, time : 0.0708 s.
+Iter 16. Finished greedy search in 1.1152 s, with 2 states.
+Iter 15. Adding 17596 extra transitions to final model helped : dF/|F| = 1.0341e-08, time : 0.074864 s.
+Iter 15. Finished greedy search in 1.289 s, with 2 states.
+Iter 14. Adding 17595 extra transitions to final model helped : dF/|F| = 9.7685e-09, time : 0.076387 s.
+Iter 14. Finished greedy search in 1.3263 s, with 2 states.
+Iter 13. Adding 17578 extra transitions to final model helped : dF/|F| = 1.2534e-08, time : 0.081744 s.
+Iter 13. Finished greedy search in 1.2123 s, with 2 states.
+Iter 12. Adding 17596 extra transitions to final model helped : dF/|F| = 1.2685e-08, time : 0.080095 s.
+Iter 12. Finished greedy search in 1.3166 s, with 2 states.
+Iter 11. Adding 17579 extra transitions to final model helped : dF/|F| = 9.8877e-09, time : 0.074434 s.
+Iter 11. Finished greedy search in 1.3068 s, with 2 states.
+Iter 10. Adding 17578 extra transitions to final model helped : dF/|F| = 1.2905e-08, time : 0.076239 s.
+Iter 10. Finished greedy search in 1.2666 s, with 2 states.
+Iter 9. Adding 17579 extra transitions to final model helped : dF/|F| = 1.1361e-08, time : 0.077522 s.
+Iter 9. Finished greedy search in 1.3281 s, with 2 states.
+Iter 8. Adding 17596 extra transitions to final model helped : dF/|F| = 1.1287e-08, time : 0.076158 s.
+Iter 8. Finished greedy search in 1.3675 s, with 2 states.
+Iter 7. Adding 17596 extra transitions to final model helped : dF/|F| = 1.2641e-08, time : 0.073423 s.
+Iter 7. Finished greedy search in 1.2776 s, with 2 states.
+Iter 6. Adding 17579 extra transitions to final model helped : dF/|F| = 9.9163e-09, time : 0.07729 s.
+Iter 6. Finished greedy search in 1.2798 s, with 2 states.
+Iter 5. Adding 17579 extra transitions to final model helped : dF/|F| = 1.1352e-08, time : 0.075882 s.
+Iter 5. Finished greedy search in 1.0809 s, with 2 states.
+Iter 4. Adding 17579 extra transitions to final model helped : dF/|F| = 1.2111e-08, time : 0.075622 s.
+Iter 4. Finished greedy search in 1.3407 s, with 2 states.
+Iter 3. Adding 17596 extra transitions to final model helped : dF/|F| = 1.0777e-08, time : 0.073203 s.
+Iter 3. Finished greedy search in 1.1547 s, with 2 states.
+Iter 2. Adding 17596 extra transitions to final model helped : dF/|F| = 1.1965e-08, time : 0.07032 s.
+Iter 2. Finished greedy search in 0.73738 s, with 2 states.
+Iter 1. Adding 17579 extra transitions to final model helped : dF/|F| = 1.0263e-08, time : 0.07876 s.
+Iter 1. Finished greedy search in 0.97988 s, with 2 states.
+Sorting and regenerating best model and estimates
+ N     it   dF/|F|   d<p>/p   p 
+02     2  3.11e-09 2.20e-04  M.c , F : 6.987e+05 
+Converged normally after 2 iterations, relTolF = 1e-08, tolPar = 0.01, (M.c limiting). 
+ N     it   dF/|F|   d<p>/p   p 
+01     2  0.00e+00 0.00e+00  M.wPi , F : 6.534e+05 
+Converged normally after 2 iterations, relTolF = 1e-08, tolPar = 0.01, (M.wPi limiting). 
+Best model size: 2, from iteration 14.
+Saving .\bin_14_HMManalysis_hidden2.mat after 0.53024 min.
+Read options structure based on runinput file C:\Users\mike\Documents\GitHub\binder-tag\initial_review\CAtagSrc_vs_Binder_analysis\20201212\diffusional_dynamics\runinput_files\runinput_20201215_bin_14_hidden_2.m
+Read options structure based on runinput file C:\Users\mike\Documents\GitHub\binder-tag\initial_review\CAtagSrc_vs_Binder_analysis\20201212\diffusional_dynamics\runinput_files\runinput_20201215_bin_14_hidden_2.m
+jobID: Data from bin_14.mat :: vbspt_tracks :: 20201215
+Starting bootstrapping...
+----------
+bootstrap : 100 resampling in 40.2418 s.
+Bootstrapping the 1 state model of 2.
+bootstrap : 100 resampling in 11.3023 s.
+Bootstrapping the 2 state model of 2.
+Finished C:\Users\mike\Documents\GitHub\binder-tag\initial_review\CAtagSrc_vs_Binder_analysis\20201212\diffusional_dynamics\runinput_files\runinput_20201215_bin_14_hidden_2.m bootstrapping in 0.8701 min.
+15-Dec-2020 21:37:08 : Finished C:\Users\mike\Documents\GitHub\binder-tag\initial_review\CAtagSrc_vs_Binder_analysis\20201212\diffusional_dynamics\runinput_files\runinput_20201215_bin_14_hidden_2.m. Total run time 1.4315 min.

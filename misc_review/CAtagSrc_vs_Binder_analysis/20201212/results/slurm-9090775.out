@@ -1,0 +1,256 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+                   R2018a (9.4.0.813654) 64-bit (glnxa64)
+                             February 23, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Directory already exists.] 
+[> In cluster_segmentation (line 74)
+  In run_analysis (line 11)] 
+Starting parallel pool (parpool) using the 'local' profile ...
+connected to 15 workers.
+[Warning: Directory already exists.] 
+[> In cluster_segmentation (line 79)
+  In run_analysis (line 11)] 
+Beginning first cluster refinement step.
+Processing...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_1/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_1/roi.roi
+Processing...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_10/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_10/roi.roi
+Processing...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_11/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_11/roi.roi
+Processing...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_12/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_12/roi.roi
+Processing...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_13/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_13/roi.roi
+Processing...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_14/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_14/roi.roi
+Processing...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_15/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_15/roi.roi
+Processing...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_2/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_2/roi.roi
+Processing...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_3/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_3/roi.roi
+Processing...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_4/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_4/roi.roi
+Processing...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_5/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_5/roi.roi
+Processing...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_6/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_6/roi.roi
+Processing...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_7/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_7/roi.roi
+Processing...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_8/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_8/roi.roi
+Processing...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_9/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_9/roi.roi
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_1/RightCali_lvPALM.mat
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_10/RightCali_lvPALM.mat
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_11/RightCali_lvPALM.mat
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_12/RightCali_lvPALM.mat
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_13/RightCali_lvPALM.mat
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_14/RightCali_lvPALM.mat
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_15/RightCali_lvPALM.mat
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_2/RightCali_lvPALM.mat
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_3/RightCali_lvPALM.mat
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_4/RightCali_lvPALM.mat
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_5/RightCali_lvPALM.mat
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_6/RightCali_lvPALM.mat
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_7/RightCali_lvPALM.mat
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_8/RightCali_lvPALM.mat
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_9/RightCali_lvPALM.mat
+For refinementII_RI_tag_01, 90.43 % of input RIs < 4.00
+For refinementII_RI_tag_07, 89.21 % of input RIs < 4.00
+For refinementII_RI_tag_12, 96.81 % of input RIs < 4.00
+For refinementII_RI_tag_02, 92.62 % of input RIs < 4.00
+For refinementII_RI_tag_03, 91.98 % of input RIs < 4.00
+For refinementII_RI_tag_04, 90.37 % of input RIs < 4.00
+For refinementII_RI_tag_05, 96.67 % of input RIs < 4.00
+For refinementII_RI_tag_06, 91.22 % of input RIs < 4.00
+For refinementII_RI_tag_08, 90.06 % of input RIs < 4.00
+For refinementII_RI_tag_09, 90.00 % of input RIs < 4.00
+For refinementII_RI_tag_10, 96.61 % of input RIs < 4.00
+For refinementII_RI_tag_11, 94.33 % of input RIs < 4.00
+For refinementII_RI_tag_13, 94.71 % of input RIs < 4.00
+For refinementII_RI_tag_14, 91.46 % of input RIs < 4.00
+For refinementII_RI_tag_15, 92.40 % of input RIs < 4.00
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_6/Left_lvPALM.mat
+For refinementII_RI_bin_12, 98.51 % of input RIs < 4.00
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_11/Left_lvPALM.mat
+For refinementII_RI_bin_03, 87.79 % of input RIs < 4.00
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_13/Left_lvPALM.mat
+For refinementII_RI_bin_05, 93.84 % of input RIs < 4.00
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_10/Left_lvPALM.mat
+For refinementII_RI_bin_02, 89.75 % of input RIs < 4.00
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_3/Left_lvPALM.mat
+For refinementII_RI_bin_09, 87.67 % of input RIs < 4.00
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_9/Left_lvPALM.mat
+For refinementII_RI_bin_15, 87.14 % of input RIs < 4.00
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_15/Left_lvPALM.mat
+For refinementII_RI_bin_07, 85.41 % of input RIs < 4.00
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_7/Left_lvPALM.mat
+For refinementII_RI_bin_13, 95.60 % of input RIs < 4.00
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_14/Left_lvPALM.mat
+For refinementII_RI_bin_06, 82.85 % of input RIs < 4.00
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_2/Left_lvPALM.mat
+For refinementII_RI_bin_08, 86.84 % of input RIs < 4.00
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_8/Left_lvPALM.mat
+For refinementII_RI_bin_14, 82.45 % of input RIs < 4.00
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_1/Left_lvPALM.mat
+For refinementII_RI_bin_01, 86.58 % of input RIs < 4.00
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_12/Left_lvPALM.mat
+For refinementII_RI_bin_04, 83.69 % of input RIs < 4.00
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_4/Left_lvPALM.mat
+For refinementII_RI_bin_10, 90.70 % of input RIs < 4.00
+Refining clustering for:
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_5/Left_lvPALM.mat
+For refinementII_RI_bin_11, 89.03 % of input RIs < 4.00
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_1/RightCali_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_1/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_10/RightCali_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_10/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_11/RightCali_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_11/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_12/RightCali_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_12/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_13/RightCali_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_13/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_14/RightCali_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_14/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_15/RightCali_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_15/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_2/RightCali_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_2/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_3/RightCali_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_3/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_4/RightCali_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_4/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_6/RightCali_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_6/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_7/RightCali_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_7/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_8/RightCali_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_8/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_9/RightCali_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_9/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_6/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_6/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_12/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_12/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_4/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_4/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_9/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_9/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_14/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_14/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_13/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_13/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_11/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_11/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_3/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_3/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_7/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_7/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_15/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_15/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_10/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_10/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_2/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_2/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_8/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_8/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_5/RightCali_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_5/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_5/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_5/roi.roi
+Calculating cluster properties for...
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_1/Left_lvPALM.mat
+	/pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_1/roi.roi
+{Not enough input arguments.
+
+Error in analyze_cluster_props (line 38)
+parentFigDir = [parentFigDir figSubDir];
+
+Error in cluster_segmentation (line 89)
+analyze_cluster_props(dateprefix,suffix.cluster_props,suffix.cluster_analysis,nMinTracks,maxRIcutoff);
+% outputs [dateprefix suffix.cluster_analysis] and lots of figures
+
+Error in run_analysis (line 11)
+cluster_segmentation(dataloc, dateprefix, parentFigDir, nMinTracks, ...
+} 
