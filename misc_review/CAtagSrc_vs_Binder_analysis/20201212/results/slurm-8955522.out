@@ -1,0 +1,84 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+                   R2018a (9.4.0.813654) 64-bit (glnxa64)
+                             February 23, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+Starting parallel pool (parpool) using the 'local' profile ...
+connected to 15 workers.
+Simulating uniform density distributions
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_1/RightCali_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_10/RightCali_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_11/RightCali_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_12/RightCali_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_13/RightCali_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_14/RightCali_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_15/RightCali_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_2/RightCali_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_3/RightCali_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_4/RightCali_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_5/RightCali_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_6/RightCali_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_7/RightCali_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_8/RightCali_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_9/RightCali_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_1/Left_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_10/Left_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_11/Left_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_12/Left_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_13/Left_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_14/Left_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_15/Left_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_2/Left_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_3/Left_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_4/Left_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_5/Left_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_6/Left_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_7/Left_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_8/Left_lvPALM.mat
+Calculating simulated density distributions for /pine/scr/m/i/mikepab/bintag/20201215/inputdata/Exp20ms-C1_9/Left_lvPALM.mat
+License checkout failed.
+License Manager Error -5
+Cannot find a license for Distrib_Computing_Toolbox.
+
+Troubleshoot this issue by visiting: 
+https://www.mathworks.com/support/lme/R2018a/5
+
+Diagnostic Information:
+Feature: Distrib_Computing_Toolbox 
+License path: /nas/longleaf/apps/matlab/2018a/licenses/network.lic:/nas/longleaf/apps/matlab/2018a/licenses/network642.lic:/nas/longleaf/home/mikepab/.matlab/R2018a_licenses:/nas/longleaf/apps/matlab/2018a/licenses/license.dat 
+Licensing error: -5,0.
+Error using distcompserialize64
+Unable to checkout a license for the Parallel Computing Toolbox.
+
+Error in parallel.internal.pool.serialize (line 8)
+serialized = distcompserialize64(data);
+
+Error in remoteParallelFunction (line 70)
+    out = parallel.internal.pool.serialize(errToSerialize);
+
+License checkout failed.
+License Manager Error -5
+Cannot find a license for Distrib_Computing_Toolbox.
+
+Troubleshoot this issue by visiting: 
+https://www.mathworks.com/support/lme/R2018a/5
+
+Diagnostic Information:
+Feature: Distrib_Computing_Toolbox 
+License path: /nas/longleaf/apps/matlab/2018a/licenses/network.lic:/nas/longleaf/apps/matlab/2018a/licenses/network642.lic:/nas/longleaf/home/mikepab/.matlab/R2018a_licenses:/nas/longleaf/apps/matlab/2018a/licenses/license.dat 
+Licensing error: -5,0.
+Error using distcompserialize64
+Unable to checkout a license for the Parallel Computing Toolbox.
+
+Error in parallel.internal.pool.serialize (line 8)
+serialized = distcompserialize64(data);
+
+Error in remoteParallelFunction (line 70)
+    out = parallel.internal.pool.serialize(errToSerialize);
+
+slurmstepd: error: *** JOB 8955522 ON c0303 CANCELLED AT 2020-12-16T10:18:04 ***

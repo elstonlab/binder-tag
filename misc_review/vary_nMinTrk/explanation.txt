@@ -1,0 +1,39 @@
+One filter I apply during cluster analysis is the 'minimum number of tracks' to constitute a cluster (nMinTracks=10)
+
+Reviewers want to understand whether our results are robust to this filter; e.g. whether we've ignored important
+types of clusters at smaller sizes.
+
+Since the nMinTracks filter is applied within the cluster pipeline starting at at 
+'analyze_cluster_props' (see below flow for detail), and because these steps are
+relatively fast to run locally, my plan is to write code to iteratively call
+analyze_cluster_props(), analyze_overall_props(), update_analysis_results(),
+cluster_sizes() [to bootstrap overall cluster sizes], generate_bs_files() [to bootstrap slow/fast zone sizes],
+and track_lifetime_in_clus().
+
+(OVERALL WORKFLOW)
+
+[[BEI'S END]]
+Imaging
+Track reconstruction
+Cell ROI definitions
+
+[[MY END]]
+Variational Bayes diffusional analysis
+Cluster pipeline [cluster_segmentation()]
+    simulate_uniform_density_distributions_50x()
+    generate_density_distributions()
+    compare_voronoicell_size_distributions_sim50x()
+    generate_voronoiSegmented_clusters()
+    cluster_refinement_I()
+    cluster_refinement_II()
+    measure_cluster_props()
+    analyze_cluster_props()
+    analyze_overall_props() 
+Follow-up analyses
+    update_analysis_results()
+    cluster_sizes()
+        --> python violinplot_sizes.py
+    generate_bs_files()
+        --> python violinplot_sizes.py
+    track_lifetime_in_clus()
+

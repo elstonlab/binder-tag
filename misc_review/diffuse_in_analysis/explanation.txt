@@ -1,0 +1,15 @@
+I'm going to try removing tracks that start from the outside of the cluster, then
+recalculate cluster sizes and slow/fast sizes.
+
+There are two ways to define tracks that start from outside the cluster.
+(1) tracks whose start are outside of the 50%-threshold KDE polygon
+(2) tracks that diffused into the proposed Voronoi polygon
+
+I'm testing #1 first... 
+
+I think it's easiest to do this by modifying measure_cluster_props.m
+to introduce new measures. We'll therefore need to re-run the pipeline
+from that point
+
+
+
